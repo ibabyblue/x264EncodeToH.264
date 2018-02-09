@@ -15,6 +15,10 @@
 		4D2D9DB7202D450A0092B56B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D9DB6202D450A0092B56B /* main.m */; };
 		4D2D9DC1202D450A0092B56B /* x264EncodeToH_264Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D9DC0202D450A0092B56B /* x264EncodeToH_264Tests.m */; };
 		4D2D9DCC202D450A0092B56B /* x264EncodeToH_264UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D9DCB202D450A0092B56B /* x264EncodeToH_264UITests.m */; };
+		4D2D9DE5202D46F10092B56B /* BBVideoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D9DE4202D46F10092B56B /* BBVideoConfig.m */; };
+		4D2D9DE8202D475C0092B56B /* BBH264SoftEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D9DE7202D475C0092B56B /* BBH264SoftEncoder.m */; };
+		4D2D9DEC202D47E50092B56B /* BBVideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D9DEA202D47E50092B56B /* BBVideoCapture.m */; };
+		4D2D9DEE202D6B7E0092B56B /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2D9DDE202D455A0092B56B /* libx264.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,15 @@
 		4D2D9DC7202D450A0092B56B /* x264EncodeToH.264UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = x264EncodeToH.264UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2D9DCB202D450A0092B56B /* x264EncodeToH_264UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = x264EncodeToH_264UITests.m; sourceTree = "<group>"; };
 		4D2D9DCD202D450A0092B56B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D2D9DDB202D455A0092B56B /* x264.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x264.h; sourceTree = "<group>"; };
+		4D2D9DDC202D455A0092B56B /* x264_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x264_config.h; sourceTree = "<group>"; };
+		4D2D9DDE202D455A0092B56B /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libx264.a; sourceTree = "<group>"; };
+		4D2D9DE3202D46F10092B56B /* BBVideoConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBVideoConfig.h; sourceTree = "<group>"; };
+		4D2D9DE4202D46F10092B56B /* BBVideoConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBVideoConfig.m; sourceTree = "<group>"; };
+		4D2D9DE6202D475C0092B56B /* BBH264SoftEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBH264SoftEncoder.h; sourceTree = "<group>"; };
+		4D2D9DE7202D475C0092B56B /* BBH264SoftEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBH264SoftEncoder.m; sourceTree = "<group>"; };
+		4D2D9DEA202D47E50092B56B /* BBVideoCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBVideoCapture.m; sourceTree = "<group>"; };
+		4D2D9DEB202D47E50092B56B /* BBVideoCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBVideoCapture.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2D9DEE202D6B7E0092B56B /* libx264.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +99,7 @@
 				4D2D9DBF202D450A0092B56B /* x264EncodeToH.264Tests */,
 				4D2D9DCA202D450A0092B56B /* x264EncodeToH.264UITests */,
 				4D2D9DA5202D450A0092B56B /* Products */,
+				4D2D9DED202D6B7E0092B56B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +116,10 @@
 		4D2D9DA6202D450A0092B56B /* x264EncodeToH.264 */ = {
 			isa = PBXGroup;
 			children = (
+				4D2D9DE9202D477B0092B56B /* Capture */,
+				4D2D9DE2202D460C0092B56B /* Config */,
+				4D2D9DE1202D45BE0092B56B /* Encoder */,
+				4D2D9DD9202D455A0092B56B /* x264-iOS */,
 				4D2D9DA7202D450A0092B56B /* AppDelegate.h */,
 				4D2D9DA8202D450A0092B56B /* AppDelegate.m */,
 				4D2D9DAA202D450A0092B56B /* ViewController.h */,
@@ -130,6 +149,66 @@
 				4D2D9DCD202D450A0092B56B /* Info.plist */,
 			);
 			path = x264EncodeToH.264UITests;
+			sourceTree = "<group>";
+		};
+		4D2D9DD9202D455A0092B56B /* x264-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D9DDA202D455A0092B56B /* include */,
+				4D2D9DDD202D455A0092B56B /* lib */,
+			);
+			path = "x264-iOS";
+			sourceTree = "<group>";
+		};
+		4D2D9DDA202D455A0092B56B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D9DDB202D455A0092B56B /* x264.h */,
+				4D2D9DDC202D455A0092B56B /* x264_config.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		4D2D9DDD202D455A0092B56B /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D9DDE202D455A0092B56B /* libx264.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		4D2D9DE1202D45BE0092B56B /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D9DE6202D475C0092B56B /* BBH264SoftEncoder.h */,
+				4D2D9DE7202D475C0092B56B /* BBH264SoftEncoder.m */,
+			);
+			path = Encoder;
+			sourceTree = "<group>";
+		};
+		4D2D9DE2202D460C0092B56B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D9DE3202D46F10092B56B /* BBVideoConfig.h */,
+				4D2D9DE4202D46F10092B56B /* BBVideoConfig.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		4D2D9DE9202D477B0092B56B /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D9DEB202D47E50092B56B /* BBVideoCapture.h */,
+				4D2D9DEA202D47E50092B56B /* BBVideoCapture.m */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		4D2D9DED202D6B7E0092B56B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +347,9 @@
 				4D2D9DAC202D450A0092B56B /* ViewController.m in Sources */,
 				4D2D9DB7202D450A0092B56B /* main.m in Sources */,
 				4D2D9DA9202D450A0092B56B /* AppDelegate.m in Sources */,
+				4D2D9DE8202D475C0092B56B /* BBH264SoftEncoder.m in Sources */,
+				4D2D9DEC202D47E50092B56B /* BBVideoCapture.m in Sources */,
+				4D2D9DE5202D46F10092B56B /* BBVideoConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,9 +513,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUN98ZEQRP;
 				INFOPLIST_FILE = x264EncodeToH.264/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ibabyblue.x264EncodeToH.264.x264EncodeToH-264";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/x264-iOS/lib",
+					"$(PROJECT_DIR)/x264EncodeToH.264/x264-iOS/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibabyblue.x264EncodeToH.264;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -444,9 +533,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUN98ZEQRP;
 				INFOPLIST_FILE = x264EncodeToH.264/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ibabyblue.x264EncodeToH.264.x264EncodeToH-264";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/x264-iOS/lib",
+					"$(PROJECT_DIR)/x264EncodeToH.264/x264-iOS/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibabyblue.x264EncodeToH.264;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
