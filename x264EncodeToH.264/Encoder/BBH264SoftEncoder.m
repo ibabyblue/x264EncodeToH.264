@@ -82,6 +82,7 @@
     
     /* I帧间隔 GOP
      * 一般为帧率的整数倍，通常设置2倍，即 GOP = 帧率 * 2；
+     * GOP的大小设置和首屏秒开优化有关系。
      */
     pX264Param->b_intra_refresh = 1;
     pX264Param->b_annexb = 1;
